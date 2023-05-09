@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="form1" action="login.jsp" method="post">
+      <input type="button" value="버튼" />
+      <button name="b">버튼</button>
+      <input type="checkbox" name="chk1" /> 자바
+      <input type="checkbox" name="chk1" /> 스프링
+      <input type="checkbox" name="chk1" /> 부트 <input type="color" /><br />
+      <input type="date" /><br />
+      <input type="datetime" /><br />
+      <input type="email" /><br />
+      <input type="file" /><br />
+      <input type="hidden" /><br />
+      <input type="image" /><br />
+      <input type="month" /><br />
+      <input type="number" /><br />
+      <input type="password" /><br />
+      <input type="radio" /><br />
+      <input type="range" /><br />
+      <input type="reset" /><br />
+      <input type="search" /><br />
+      <input type="submit" /><br />
+      <input type="tel" /><br />
+      <input type="text" /><br />
+      <input type="time" /><br />
+      <input type="url" /><br />
+      <input type="week" /><br />
+    </form>
+
+    <form>
+      <table border="1">
+        <tr>
+          <td>동아리 명</td>
+          <td>카리스마</td>
+        </tr>
+        <tr>
+          <td>이 름</td>
+          <td><input type="text" value="아이디를 입력하시오." /></td>
+        </tr>
+        <tr>
+          <td>학부/학과</td>
+          <td>
+            <select>
+              <option>컴퓨터공학부</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>학 년</td>
+          <td>
+            <input type="radio" />1학년 <input type="radio" />2학년
+            <input type="radio" />3학년 <input type="radio" />4학년
+          </td>
+        </tr>
+        <tr>
+          <td>학 번</td>
+          <td><input type="text" value="학번을 입력하시오." /></td>
+        </tr>
+        <tr>
+          <td>대학 입학 년도</td>
+          <td><input type="date" /></td>
+        </tr>
+        <tr>
+          <td>이메일</td>
+          <td><input type="email" value="이메일을 입력하시오." /></td>
+        </tr>
+        <tr>
+          <td>주 소</td>
+          <td><input type="text" value="주소를 입력하시오." /></td>
+        </tr>
+        <tr>
+          <td rowspan="2">연락처</td>
+          <td><input type="radio" />집 <input type="radio" />휴대전화</td>
+        </tr>
+        <tr>
+          <td><input type="text" value="전화번호를 입력하시오." /></td>
+        </tr>
+        <tr>
+          <td>SNS 주소</td>
+          <td><input type="text" value="SNS 주소를 입력하시오" /></td>
+        </tr>
+        <tr>
+          <td>가입 동기</td>
+          <td>
+            <input
+              type="text"
+              value="카리스마의 어떤 점을 보고 가입하고 싶으셨나요?"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>자기소개</td>
+          <td><input type="text" value="당신은 어떤 사람인가요?" /></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="button" value="가입하기" />
+            <input type="button" value="취소하기" />
+          </td>
+        </tr>
+        <tr></tr>
+      </table>
+    </form>
+
+    <hr />
+    <form>
+      <fieldset>
+        <legend>로그인 정보</legend>
+        아이디 : <input type="text" /><br />
+        비밀번호 : <input type="password" /><br />
+        비밀번호 확인 : <input type="password" /><br />
+      </fieldset>
+
+      <br />
+      <fieldset>
+        <legend>개인 정보</legend>
+        이름 : <input type="text" /><br />
+        메일 주소 : <input type="email" /><br />
+        연락처 : <input type="tel" /><br />
+      </fieldset>
+    </form>
+  </body>
+</html>
