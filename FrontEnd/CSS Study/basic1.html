@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타일 우선 순위</title>
+    <!-- <style>
+      body,
+      div,
+      h2,
+      p {
+        /* 위 아래가 20px, 좌우가  auto */
+        margin: 20px auto;
+      }
+      body {
+        color: blue;
+      }
+      #container {
+        width: 600px;
+        padding: 15px;
+        border: 3px dotted grey;
+        color: blueviolet;
+      }
+      h2 {
+        color: brown !important;
+      }
+    </style> -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
+      body {
+        color: blue;
+        font-family: "Nanum Pen Script", cursive;
+      }
+      h2 {
+        color: orange;
+      }
+      p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h2 id="container" style="color: green">이지스퍼블리싱의 미션</h2>
+
+      <p>
+        사람에게 구체적으로 도움을 주는 책,<br />
+
+        우리는 열심히 사는 사람들에게 도움이 되고 싶습니다.<br />
+      </p>
+
+      <p>우리는 책을 출간하기 전에 질문할 것입니다.</p>
+
+      <p style="color: red; font-style: italic">
+        "이 책이 사람들에게 도움이 됩니까?"
+      </p>
+    </div>
+
+    <h1>CSS</h1>
+    <h2>웹 문서의 디자인과 내용을 분리합니다</h2>
+    <p>웹 표준에 의한 웹 문서는 디자인과 내용이 분리되어 있습니다.</p>
+    <p>내용은 HTML을 이용해 구성하고, 디자인은 CSS를 이용해 꾸미는 것입니다.</p>
+  </body>
+</html>
