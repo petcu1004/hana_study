@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #eee;
+      }
+      section {
+        width: 600px;
+        margin: 20px auto;
+      }
+      p {
+        width: 500px;
+        padding: 10px;
+        background-color: white;
+        border: 1px solid #ccc;
+      }
+      /* 후손 선택자 */
+      section p {
+        color: blue;
+      }
+      /* 자식 선택자 */
+      section > p {
+        color: green;
+      }
+      section > div > p {
+        font-size: small;
+      }
+      /* 인접한 형제 선택자(인접태그 h1태그의 형제중 바로 아래에 있는 형제) */
+      h1 + p {
+        color: red;
+      }
+      p + p {
+        color: pink;
+      }
+      /* 모든 형제 선택자 */
+      h1 ~ p {
+        background-color: blanchedalmond;
+      }
+      ul{
+        background-color: black;
+      }
+      li{
+        color:white;
+        /* background-color: black; */
+        list-style-type: circle;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>예약방법 & 사용요금</h1>
+      <p>
+        아직 온라인 예약 신청이 준비되어 있지 않습니다.
+        <br />전화(010-123-1234)로 문의 바랍니다.
+      </p>
+      <div>
+        <p>가족실(2~4인):60,000원/일</p>
+        <p>도미토리(4인 공용) : 25,000원/일</p>
+      </div>
+      <h2>입실시간 안내</h2>
+      <p>13시부터 입실 가능
+      <div>
+      <ul>
+        <li>1차 입실</li>
+        <li>2차 입실</li>
+        <li>3차 입실</li>
+      </ul>
+    </div>
+    </p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      li {
+        width: 120px;
+        display: inline-block;
+        margin: 10px;
+      }
+      li a {
+        padding: 5px 20px;
+        font-size: 14px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      /* a태그에서 href 속성을 가지고 있는 것을 선택 */
+      a[href] {
+        background-color: yellowgreen;
+        border: 1px solid #ccc;
+        font-weight: normal;
+      }
+      /* a태그에서 target 속성의 값으로 선택 */
+      a[target="_blank"] {
+        padding-right: 30px;
+        background: url("../HTMLStudy/images/light.png") no-repeat center right;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a>메인 메뉴 :</a></li>
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li><a href="#">메뉴4</a></li>
+    </ul>
+    <ul>
+      <li><a href="http://html.spec.whatwg.org" target="_blank">HTML</a></li>
+      <li><a href="http://www.w3.org/tr/selectors">Selectorlevel3</a></li>
+      <li><a href="http://www.w3.org/tr/css3-meiaqueries">미디어쿼리</a></li>
+    </ul>
+  </body>
+</html>
