@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>플렉스 박스 레이아웃</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .container {
+        /* width: 450px; */
+        width: 80%;
+        height: 150px;
+        /* float: left; */
+        /* width: 200px; */
+        /* flex-flow: row wrap; 왼쪽에서 오른쪽, 여러 줄 표시 */
+        display: flex; /* 플렉스 컨테이너 지정 */
+        background-color: #eee;
+        border: 1px solid #222;
+        margin-bottom: 30px;
+        align-items: center;
+        margin-left: 10px;
+      }
+      .box {
+        width: 60px;
+        height: 60px;
+        /* padding: 5px 45px; */
+        margin: 5px;
+        /* width: 80px; */
+        background-color: #222;
+        /* border: 1px dotted #e9e9e9; */
+      }
+
+      #opt1 {
+        /* flex-direction: row; 왼쪽에서 오른쪽으로 */
+        /* flex-wrap: nowrap; 한 줄에 표시 */
+        /* flex-flow: row wrap; 왼쪽에서 오른쪽, 여러 줄 */
+        /* justify-content: flex-start; 주축 시작점 기준으로 배치 */
+        /* align-items: flex-start; 교차축 시작점 기준으로 배치 */
+        align-content: flex-start; /* 교차축 시작점 기준 */
+      }
+      #opt2 {
+        /* flex-direction: row-reverse; 오른쪽에서 왼쪽으로 */
+        /* flex-wrap: wrap; 여러 줄에 표시 */
+        /* flex-flow: row nowrap; 왼쪽에서 오른쪽, 한 줄 */
+        /* justify-content: flex-end; 주축 끝점 기준으로 배치 */
+        /* align-items: flex-end; 교차축 끝점 기준으로 배치 */
+        align-content: flex-end; /* 교차축 끝점 기준 */
+      }
+      #opt3 {
+        /* flex-direction: column; 위에서 아래로 */
+        /* flex-wrap: wrap-reverse; 항목의 순서를 바꿔 여러 줄에 표시 */
+        /* justify-content: center; 주축 중앙 기준으로 배치 */
+        /* align-items: center; 교차축 중앙 기준으로 배치 */
+        align-content: center; /* 교차축 중앙 기준 */
+      }
+      #opt4 {
+        /* flex-direction: column-reverse; 아래에서 위로 */
+        /* justify-content: space-between; 시작점과 끝점 배치 후 중간 항목은 같은 간격으로 배치 */
+        /* align-items: baseline; 문자 기준선에 맞춰 배치 */
+        align-content: space-between; /* 시작점과 끝점 배치 후 중간 항목은 같은 간격으로 배치 */
+      }
+      #opt5 {
+        /* justify-content: space-around; 전체 항목을 같은 간격으로 배치 */
+        /* align-items: stretch; 항목을 늘려 교차축에 가득차게 배치 */
+        align-content: space-around; /* 전체 항목을 같은 간격으로 배치 */
+      }
+      #opt6 {
+        align-content: stretch; /* 항목을 늘려 교차축에 가득 차게 배치 */
+      }
+      p {
+        color: #fff;
+        text-align: center;
+      }
+
+      /* #box1 {
+        align-self: flex-start;
+      }
+      #box3 {
+        align-self: stretch;
+      } */
+      #box1 {
+        flex: 1;
+      }
+      #box2 {
+        flex: 30px;
+      }
+      #box3 {
+        flex: 2 2;
+      }
+      #box4 {
+        flex: 1 40px;
+      }
+      #box5 {
+        flex: 2 2 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box1"><p>1</p></div>
+      <div class="box" id="box2"><p>2</p></div>
+      <div class="box" id="box3"><p>3</p></div>
+      <div class="box" id="box4"><p>4</p></div>
+      <div class="box" id="box5"><p>5</p></div>
+    </div>
+  </body>
+</html>
