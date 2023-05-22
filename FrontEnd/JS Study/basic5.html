@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 300px;
+      }
+      input {
+        width: 120px;
+      }
+      button {
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <p>원래 가격 <input type="text" id="price" /> 원</p>
+    <p>할인율 <input type="text" id="disc" /> %</p>
+    <button onclick="res_btn()">할인 가격 계산하기</button>
+    <p id="result">결과는?</p>
+
+    <script>
+      function res_btn() {
+        let pri = document.getElementById("price").value;
+
+        let dis = document.getElementById("disc").value;
+
+        let p = pri * (dis / 100);
+        let r = pri - p;
+
+        document.getElementById("result").innerHTML =
+          "상품의 원래 가격은 " +
+          pri +
+          "이고, 할인율은 " +
+          dis +
+          "%입니다. " +
+          p +
+          "원을 절약한 " +
+          r +
+          "원에 살 수 있습니다.";
+      }
+    </script>
+  </body>
+</html>
