@@ -1,0 +1,14 @@
+h2 {
+  text-align: center;
+}
+
+th {
+  background-color: antiquewhite;
+  /* font-weight: bolder; */
+}
+
+textarea {
+  width: 99%;
+  height: 200px;
+  /* display: inline-block; */
+}
