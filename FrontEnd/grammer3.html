@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function pro1(name, addr, tel) {
+      //     return {
+      //       name,
+      //       addr,
+      //       tel,
+      //     };
+      //   }
+      //   let pro = pro1("hee", "seoul", "010-1234-1234");
+      //   alert(pro.name); //hee
+
+      //   let obj1 = {
+      //     name: "aa",
+      //   };
+      //   alert("name" in obj1);
+
+      //   let forIn = {
+      //     name: "홍길동",
+      //     email: "a@naver.com",
+      //   };
+
+      //   for (let key in forIn) {
+      //     alert(key);
+      //     alert(forIn[key]);
+      //   }
+
+      //   let codes = {
+      //     10: "독일",
+      //     9: "미국",
+      //     8: "일본",
+      //     1: "한국",
+      //   };
+
+      //   //객체는 자동으로 오름차순 정렬됨
+      //   for (code in codes) {
+      //     alert(code); // 1 2 3순으로 출력됨 자동정렬됨
+      //   }
+
+      //   let aa = {};
+      //   alert(isEmpty(aa));
+
+      //   let obj1 = {
+      //     name: "홍길동",
+      //     age: 23,
+      //   };
+
+      //   obj1.sayHello = function () {
+      //     alert("안녕 외부 메소드");
+      //   };
+
+      //   obj1.sayHello();
+
+      //   let obj2 = {
+      //     name: "홍길동",
+      //     age: 23,
+      //     sayHello() {
+      //       alert("내부에 있는 메소드야" + obj2.name);
+      //     },
+      //   };
+
+      //   let newObj2 = obj2;
+
+      //   obj2 = null;
+
+      //   obj2.sayHello();
+
+      //   let user = { name: "John" };
+      //   let admin = { name: "Admin" };
+
+      // //   user 객체와 admin 객체에서 공통으로 들어가는 함수를 외부로 정의한 후에 객체의 키로 정의함.
+      //   function sayHi() {
+      //     alert(this.name);
+      //   }
+
+      //   // 별개의 객체에서 동일한 함수를 사용함
+      //   user.f = sayHi; //f라는 함수에 sayHi함수 대입
+      //   admin.f = sayHi;
+
+      //   // 'this'는 '점(.) 앞의' 객체를 참조하기 때문에
+      //   // this 값이 달라짐
+      //   user.f(); // John  (this == user)
+      //   admin.f(); // Admin  (this == admin)
+
+      //   admin["f"](); // Admin (점과 대괄호는 동일하게 동작함)
+
+      let user = {
+        firstName: "보라",
+        sayHi(name) {
+          let first = { firstName: name };
+          //   let arrow = () => alert(this.firstName); //화살표 함수에서 this는 화살표 함수가 아닌 위에 user객체의 식별자인 firstName을 가리킴
+          let arrow = () => alert(first.firstName);
+          arrow();
+        },
+      };
+
+      user.sayHi("홍길동"); // 보라
+    </script>
+  </body>
+</html>

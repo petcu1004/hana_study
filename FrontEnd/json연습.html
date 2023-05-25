@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let user = {
+      //     name: "홍길동",
+      //     age: 23,
+      //     toString() {
+      //       return `{name: "${this.name}", age:${this.age}}`;
+      //     },
+      //   };
+      //   alert(user);
+
+      let obj1 = {
+        a: "1",
+        b: "2",
+        c: "3",
+      };
+      let json = JSON.stringify(obj1);
+      //   alert(typeof json); // 문자열임
+      //   alert(json); //json으로 인코딩됨
+
+      //   // 숫자를 JSON으로 인코딩하면 숫자입니다.
+      //   alert(JSON.stringify(1)); // 1
+
+      //   // 문자열을 JSON으로 인코딩하면 문자열입니다(다만, 큰따옴표가 추가됩니다).
+      //   alert(JSON.stringify("test")); // "test"
+
+      //   alert(JSON.stringify(true)); // true
+
+      //   alert(JSON.stringify([1, 2, 3])); // [1,2,3]
+      //   alert(JSON.stringify({ name: "a", age: 23 })); //{"name":"a","age":23}
+
+      //   let user = {
+      //     sayHi() {
+      //       // 무시
+      //       alert("Hello");
+      //     },
+      //     [Symbol("id")]: 123, // 무시
+      //     something: undefined, // 무시
+      //   };
+
+      //   alert(JSON.stringify(user)); // {} (빈 객체가 출력됨)
+
+      //       let room = {
+      //         number: 23,
+      //         toJSON() {
+      //           return this.number; //﻿toJSON을 메소드로 재정의하면 재정의한 형식으로 나타나고 재정의 하지 않으면 객체를 JSON으로 만든다
+      //         },
+      //       };
+
+      //       let meetup = {
+      //         title: "Conference",
+      //         date: new Date(Date.UTC(2017, 0, 1)),
+      //         room,
+      //       };
+
+      //       alert(JSON.stringify(room)); // 23
+      //       alert(JSON.stringify(meetup));
+      //       /*
+      //   {
+      //     "title":"Conference",
+      //     "date":"2017-01-01T00:00:00.000Z",  // (1)
+      //     "room": {"number":23}               // (2)
+      //   }
+      // */
+
+      //   // 문자열로 변환된 배열
+      //   let numbers = "[0, 1, 2, 3]";
+
+      //   numbers = JSON.parse(numbers);
+
+      //   alert(numbers[1]); // 1
+
+      //   let userData =
+      //     '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
+
+      //   let user = JSON.parse(userData);
+
+      //   alert(user.friends[1]); // 1
+
+      //       let json = `{
+      //   name: "John",                     // 실수 1: 프로퍼티 이름을 큰따옴표로 감싸지 않았습니다.
+      //   "surname": 'Smith',               // 실수 2: 프로퍼티 값은 큰따옴표로 감싸야 하는데, 작은따옴표로 감쌌습니다.
+      //   'isAdmin': false                  // 실수 3: 프로퍼티 키는 큰따옴표로 감싸야 하는데, 작은따옴표로 감쌌습니다.
+      //   "birthday": new Date(2000, 2, 3), // 실수 4: "new"를 사용할 수 없습니다. 순수한 값(bare value)만 사용할 수 있습니다.
+      //   "friends": [0,1,2,3]              // 이 프로퍼티는 괜찮습니다.
+      // }`;
+
+      let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
+
+      let meetup = JSON.parse(str, function (key, value) {
+        if (key == "date") return new Date(value);
+        return value;
+      });
+
+      alert(meetup.date.getDate()); // 이제 제대로 동작하네요!
+    </script>
+  </body>
+</html>
