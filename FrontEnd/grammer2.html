@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let obj1 = {};
+      // obj1["like computer"] = true;
+      // alert(obj1["like computer"]);
+      // obj1.name = "홍길동";
+      // alert(obj1.name);
+
+      // obj1[age]=20 //오류남
+      // alert(obj1.age);
+
+      // let user = {
+      //   name: "john",
+      //   age: 30,
+      // };
+      // let key = prompt("어떤 정보를 알고싶나요?", "name");
+      // alert(user[key]);
+      //   alert(user.key);
+
+      //   const obj1 = {
+      //     name: "홍길동",
+      //   };
+      //   alert(obj1.name);
+
+      //   obj1.name = "이순신";
+      //   alert(obj1.name);
+
+      //   delete obj1.name;
+      //   alert(obj1.name);
+
+      let sungjuk = {
+        name: "홍길동",
+        dept: "컴퓨터 공학과",
+        age: 23,
+        gender: "남자",
+        teacher: "정현희",
+        java: 100,
+        python: 95,
+        dataStru: 85,
+      };
+
+      // let score = prompt("알고싶은 과목 점수는?");
+      // alert(sungjuk[score]);
+
+      let mtitle = prompt("수정할 과목은?");
+      let mscore = prompt("수정할 과목 점수는?");
+
+      sungjuk[mtitle] = mscore;
+      alert(sungjuk[mtitle]);
+    </script>
+  </body>
+</html>

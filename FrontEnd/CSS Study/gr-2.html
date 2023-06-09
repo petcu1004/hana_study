@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 - Grid 배치하기</title>
+    <style>
+      #wrapper {
+        display: grid;
+        width: 700px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 100px);
+      }
+      .box {
+        padding: 15px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+      }
+      .box1 {
+        background-color: blue;
+        grid-column: 1/4;
+      }
+      .box2 {
+        background-color: cornflowerblue;
+        grid-row: 2/4;
+      }
+      .box3 {
+        background-color: aqua;
+        grid-column: 2/4;
+      }
+      .box4 {
+        background-color: cadetblue;
+        grid-row: 3/4;
+        grid-column: 3/4;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
+      <div class="box box3">box3</div>
+      <div class="box box4">box4</div>
+    </div>
+  </body>
+</html>

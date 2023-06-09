@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        /* background-color: antiquewhite; */
+      }
+    </style>
+
+    <script>
+      //   setTime(function () {
+      //     document.getElementById("pop").click();
+      //     // popup();
+      //   }, 3000);
+
+      function popup() {
+        var url = "popup.html";
+        var name = "popup test";
+        var option = "width=300, heigth=300, top = 100, left=200, location=yes";
+        window.resizeTo(300, 300);
+        window.open(url, name, option);
+      }
+    </script>
+  </head>
+  <!-- 잠깐 지워놓음 -->
+  <!-- <body onload="setTimeout('popup()', 3000)"> -->
+  <body>
+    <div>
+      <img src="./popup/title.gif" />
+      <div>
+      <img style="float:left" src="./popup/photo1.jpg"
+      
+        <p>-장르 : 드라마/로맨스<br>-국가 : 미국 / 영국 / 프랑스 <br>-사영시간 : 105분</p>
+      </div>
+    </div>
+  </body>
+</html>

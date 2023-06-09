@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = new Array();
+      let arr1 = [];
+      let arr2 = [1, 2, 3];
+      //   alert(arr2[0]);
+      //   arr2[3] = 8;
+      //   alert(arr2[3]);
+
+      //   arr[0] = "a";
+      let arr3 = [1, 2, 3];
+
+      //   alert(arr3.push(4));
+      //   alert(arr3.pop());
+
+      //   alert(arr3.shift());
+      //   alert(arr3);
+      //   alert(arr3.unshift(4));
+      //   alert(arr3);
+
+      //   let fruit = ["사과", "배", "바나나", "복숭아"];
+      //   alert(fruit);
+      //   fruit.push("수박");
+      //   alert(fruit);
+      //   fruit[Math.floor(fruit.length - 1) / 2] = "참외";
+      //   alert(fruit);
+      //   fruit.shift();
+      //   alert(fruit);
+      //   fruit.unshift("파인애플", "자몽");
+      //   alert(fruit);
+
+      function sumInput() {
+        let sum = [];
+
+        while (1) {
+          let input = prompt("숫자를 입력하세요");
+
+          if (input === "" || input === null || !isFinite(input)) break;
+
+          sum.push(+input);
+        }
+        let res = 0;
+        for (let n of sum) {
+          res += n;
+        }
+        return res;
+      }
+
+      alert(sumInput());
+    </script>
+  </body>
+</html>

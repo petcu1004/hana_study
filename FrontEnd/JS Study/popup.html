@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.resizeTo(270, 430);
+
+      function doAction() {
+        window.close();
+      }
+    </script>
+    <style>
+      #pop {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pop">
+      <img src="./popup/b.jpg" width="220px" height="290px" />
+      <div>
+        <input type="checkbox" /> 오늘 하루는 창 띄우기 않기
+        <input type="button" value="닫기" onclick="doAction()" />
+      </div>
+    </div>
+  </body>
+</html>

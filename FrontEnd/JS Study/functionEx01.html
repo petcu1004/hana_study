@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 함수정의
+      function sayHello(name) {
+        console.log(name + "SayHello");
+      }
+
+      //   함수 표현식
+      let sayHello1 = function (num) {
+        console.log("hello1 js   " + num);
+      };
+
+      //   화살표 함수
+      let sayHello2 = (num) => {
+        console.log("hello2 js  " + num);
+      };
+
+      sayHello("abs");
+      sayHello1();
+      sayHello2();
+    </script>
+  </body>
+</html>

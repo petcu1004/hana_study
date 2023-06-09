@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <ul>
+        <li>
+          <label for="uid">아이디</label>
+          <input
+            type="text"
+            id="uid"
+            autofocus
+            placeholder="4자~16자사이, 공백없이"
+            required
+          />
+        </li>
+        <li>
+          <input type="submit" />
+        </li>
+      </ul>
+      <select id="prod1">
+        <option value="s1" selected>선물용1</option>
+        <option value="s2">선물용2</option>
+        <option value="s3">선물용3</option>
+      </select>
+      <label for="prod2">포장 여부</label>
+      <input type="text" id="prod2" list="pack" />
+      <datalist id="pack">
+        <option value="p1">선물포장</option>
+        <option value="p2">포장없음</option>
+      </datalist>
+      <button type="submit">폼을 서버에 전송</button>
+      <button type="reset">입력한 내용을 지우기</button>
+      <button type="button">버튼형태(이벤트) 처리</button>
+    </form>
+  </body>
+</html>
