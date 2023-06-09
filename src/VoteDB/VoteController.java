@@ -25,7 +25,6 @@ public class VoteController extends HttpServlet {
     }
 
     protected void requestPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         /* URL check */
         String uri = request.getRequestURI();
         String context = request.getContextPath();
